@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "CHROME_BIN=/usr/bin/chromium npx karma start"
+    "test": "CHROME_BIN=/usr/bin/chromium npx karma start",
+    "build": "npx esbuild src/* --bundle --outdir=build"
   },
-  "type": "commonjs",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -15,8 +15,10 @@
     "karma": "^6.4.0",
     "karma-chrome-launcher": "^3.1.1",
     "karma-commonjs": "^1.0.0",
-    "karma-jasmine": "^5.1.0",
-    "karma-requirejs": "^1.1.0",
-    "requirejs": "^2.3.6"
+    "karma-esbuild": "^2.2.4",
+    "karma-jasmine": "^5.1.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.49"
   }
 }

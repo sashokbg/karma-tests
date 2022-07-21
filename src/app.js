@@ -1,4 +1,4 @@
-class MyClass {
+export class MyClass {
   constructor() {
     console.log('MY CLASS');
   }
@@ -7,5 +7,3 @@ class MyClass {
     return a + b;
   }
 }
-
-module.exports = MyClass
