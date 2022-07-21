@@ -8,8 +8,9 @@ module.exports = function (config) {
     frameworks: ['jasmine'],
 
     files: [
-      {pattern: 'src/**/*.js', included: false},
-      {pattern: 'test/**/*spec.js', included: false}
+      {pattern: 'src/**/*.html'},
+      {pattern: 'src/**/*.js'},
+      {pattern: 'test/**/*spec.js'}
     ],
 
     exclude: [
@@ -17,7 +18,8 @@ module.exports = function (config) {
 
     preprocessors: {
       'src/**/*.js': ['esbuild'],
-      'test/**/*.js': ['esbuild']
+      'test/**/*.js': ['esbuild'],
+      '**/*.html': ['html2js']
     },
 
 

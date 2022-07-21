@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "CHROME_BIN=/usr/bin/chromium npx karma start",
-    "build": "npx esbuild src/* --bundle --outdir=build"
+    "build": "npx esbuild src/*.js --bundle --outdir=build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "jquery": "^3.6.0"
+  },
   "devDependencies": {
     "jasmine-core": "^4.2.0",
     "karma": "^6.4.0",
@@ -19,6 +22,7 @@
     "karma-jasmine": "^5.1.0"
   },
   "dependencies": {
-    "esbuild": "^0.14.49"
+    "esbuild": "^0.14.49",
+    "karma-html2js-preprocessor": "^1.1.0"
   }
 }
